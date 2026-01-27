@@ -1,0 +1,11 @@
+{
+  "name": "static-large-blacksmith-4vcpu",
+  "private": true,
+  "dependencies": {
+    "del": "^5.1.0",
+    "hyperid": "^2.0.2"
+  },
+  "scripts": {
+    "build": "./build.sh"
+  }
+}

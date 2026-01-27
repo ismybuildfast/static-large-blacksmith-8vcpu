@@ -1,0 +1,5 @@
+node_modules
+public/bench.txt
+public/files
+.vercel
+.env*.local
