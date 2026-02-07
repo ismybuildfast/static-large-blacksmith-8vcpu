@@ -47,6 +47,9 @@ jobs:
         run: |
           source ./build
           
+          # Clean previous build output to ensure cold build
+          rm -rf .vercel/output .next
+          
           # Build - generate 10,000 static files
           START_TS=$(date +%s)
           node build.js
