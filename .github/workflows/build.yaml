@@ -48,7 +48,7 @@ jobs:
           source ./build
           
           # Clean previous build output to ensure cold build
-          rm -rf .vercel/output .next
+          rm -rf .vercel/output
           
           # Build - generate 10,000 static files
           START_TS=$(date +%s)
