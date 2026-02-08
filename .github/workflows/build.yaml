@@ -78,6 +78,11 @@ jobs:
           EOF
           
           # Build with Vercel (package static files)
+          # Build using Next.js directly (preserves .next/cache for incremental)
+          rm -rf .next
+          node build.js
+          
+          # Package for Vercel deployment
           vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
           
           # Deploy
@@ -136,6 +141,10 @@ jobs:
           EOF
           
           # Build with Vercel (package for incremental deploy)
+          # Build using Next.js directly (reuses .next/cache)
+          node build.js
+          
+          # Package for Vercel deployment
           vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
           
           # Deploy to get ready_ts
